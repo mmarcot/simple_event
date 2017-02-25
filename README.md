@@ -2,16 +2,23 @@
 Odoo 8.0 module simple event. Easy and flexible events managing
 
 **Author:** mmarcot
+**License:** MIT
 
-4 models:
-  - event: create/edit/delete events
-  - event_type: manage several types of events (lunch, training, meeting...)
-  - registration: register partners in events
-  - partner: adding some extra features to res.partner such as registrations count
+### 4 models:
+  - **event:** create/edit/delete events
+  - **event_type:** manage several types of events (lunch, training, meeting...)
+  - **registration:** register partners in events
+  - **partner:** adding some extra features to res.partner such as registrations count
 
-Languages:
+
+### Languages:
   - English
   - French
+  
+  
+### Access rights:
+  - **Event manager:** *read, write, create* and delete on models event, registration, and event_type
+  - **Event viewer:** *readonly* on models event, registration, and event_type
 
 ## Events
 
