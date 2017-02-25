@@ -14,14 +14,14 @@ Languages:
 
 ## Events
 
-![Event's view list](https://www.noelshack.com/2017-08-1488040141-screenshot-localhost-8080-2017-02-25-17-27-18.png)
+![Event's view list](https://github.com/mmarcot/simple_event/blob/screenshots/screenshots/events_list.png)
 
-![Event's view form](https://www.noelshack.com/2017-08-1488040321-events-form.png)
+![Event's view form](https://github.com/mmarcot/simple_event/blob/screenshots/screenshots/events_form.png)
 
 
 ## Registrations
 
-![Registration's view form](https://www.noelshack.com/2017-08-1488040638-registration-form.png)
+![Registration's view form](https://github.com/mmarcot/simple_event/blob/screenshots/screenshots/registration_form.png)
 
   
   
