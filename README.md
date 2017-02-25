@@ -2,6 +2,7 @@
 Odoo 8.0 module simple event. Easy and flexible events managing
 
 **Author:** mmarcot
+
 **License:** MIT
 
 ### 4 models:
