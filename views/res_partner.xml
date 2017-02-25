@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_partner_form" model="ir.ui.view">
+            <field name="name">rosaire_view_partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='buttons']" position="inside">
+                    <button name="%(simple_event.act_event_list_register_partner)d"
+                        type="action"
+                        class="oe_stat_button oe_inline"
+                        icon="fa-github"
+                        help="Event's registrations">
+                        <field name="registration_count" widget="statinfo" string="Registrations"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_list_partner">
+            <field name="name">Partners</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>

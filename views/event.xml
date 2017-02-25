@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_event_tree" model="ir.ui.view">
+            <field name="name">simple_event_event_tree</field>
+            <field name="model">simple.event.event</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="type_id"/>
+                    <field name="date_start"/>
+                    <field name="nb_invite"/>
+                    <field name="nb_confirm"/>
+                    <field name="nb_present"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_event_calendar" model="ir.ui.view">
+            <field name="name">simple_event_event_calendar</field>
+            <field name="model">simple.event.event</field>
+            <field name="arch" type="xml">
+                <calendar color="type_id" mode="month" date_stop="date_stop" date_start="date_start">
+                    <field name="name"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="view_event_graph" model="ir.ui.view">
+            <field name="name">simple_event_event_graph</field>
+            <field name="model">simple.event.event</field>
+            <field name="arch" type="xml">
+                <graph>
+                    <field name="name" type="row"/>
+                    <field name="nb_total" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_event_search">
+            <field name="name">Events</field>
+            <field name="model">simple.event.event</field>
+            <field name="arch" type="xml">
+                <search string="Events">
+                    <field name="name" string="Events"/>
+                    <separator/>
+                    <filter name="confirm" string="Confirmed" domain="[('state','=','confirm')]" help="Confirmed events"/>
+                    <filter string="Done" name="draft" domain="[('state','=','done')]" help="Events done"/>
+                    <separator/>
+                    <filter string="Upcoming" name="upcoming" domain="[('date_start','&gt;=', datetime.datetime.combine(context_today(), datetime.time(0,0,0)))]" help="Upcoming events from today" />
+                    <field name="type_id"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Event Type" context="{'group_by':'type_id'}"/>
+                        <filter string="Status" context="{'group_by':'state'}"/>
+                        <filter string="Start Month" domain="[]" context="{'group_by':'date_start'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_event_form" model="ir.ui.view">
+            <field name="name">simple_event_event_form</field>
+            <field name="model">simple.event.event</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="button_confirm" type="object" string="Back to confirmed" states="done" groups="simple_event.group_event_write"/>
+                        <button name="button_done" type="object" string="Event done" class="oe_highlight" states="confirm" groups="simple_event.group_event_write"/>
+                        <field name="state" widget="statusbar" statusbar_visible="confirm,done" statusbar_colors='{"confirm":"blue","done":"blue"}'/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1><field name="name" attrs="{'readonly':[('state','=', 'done')]}"/></h1>
+                        </div>
+                        <div class="oe_right oe_button_box" groups="base.group_user">
+                            <button name="%(simple_event.act_event_list_register_event)d"
+                                type="action"
+                                class="oe_stat_button oe_inline"
+                                icon="fa-github"
+                                help="Event's registrations">
+                                <field name="nb_total" widget="statinfo" string="Registrations"/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="type_id" attrs="{'readonly':[('state','=', 'done')]}"/>
+                                <field name="description" attrs="{'readonly':[('state','=', 'done')]}"/>
+                            </group>
+                            <group>
+                                <field name="date_start" attrs="{'readonly':[('state','=', 'done')]}"/>
+                                <field name="date_stop" attrs="{'readonly':[('state','=', 'done')]}"/>
+                            </group>
+                            <group>
+                                <field name="nb_invite"/>
+                                <field name="nb_confirm"/>
+                                <field name="nb_present"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_list_event">
+            <field name="name">Events</field>
+            <field name="res_model">simple.event.event</field>
+            <field name="view_mode">tree,form,calendar,graph</field>
+        </record>
+    </data>
+</openerp>

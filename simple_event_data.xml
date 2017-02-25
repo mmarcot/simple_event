@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="simple.event.event.type" id="type_training">
+            <field name="name">Training</field>
+        </record>
+        <record model="simple.event.event.type" id="type_meeting">
+            <field name="name">Meeting</field>
+        </record>
+        <record model="simple.event.event.type" id="type_lunch">
+            <field name="name">Lunch</field>
+        </record>
+    </data>
+</openerp>

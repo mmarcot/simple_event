@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<openerp>
+    <data>
+        <menuitem name="Events" id="menu_event_top"/>
+        <menuitem name="Events" id="menu_event_titre" parent="menu_event_top"/>
+        <menuitem name="Events" id="menu_event" parent="menu_event_titre" action="action_list_event"/>
+        <menuitem name="Partners" id="menu_event_partner" parent="menu_event_titre" action="action_list_partner"/>
+        <menuitem name="Registrations" id="menu_registration" parent="menu_event_titre" action="action_list_registration"/>
+        <menuitem name="Settings" id="menu_event_settings_titre" parent="menu_event_top"/>
+        <menuitem name="Event types" id="menu_event_type" parent="menu_event_settings_titre" action="action_list_event_type"/>
+    </data>
+</openerp>

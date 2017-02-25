@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_event_registration_tree" model="ir.ui.view">
+            <field name="name">simple_event_registration_tree</field>
+            <field name="model">simple.event.registration</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="partner_id"/>
+                    <field name="event_id"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                    <field name="state"/>
+                    <button name="button_confirm" string="Confirm Registration" states="invite" type="object" icon="gtk-apply"/>
+                    <button name="button_present" string="Attended the Event" states="confirm" type="object" icon="gtk-jump-to"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_registration_search">
+            <field name="name">Registrations</field>
+            <field name="model">simple.event.registration</field>
+            <field name="arch" type="xml">
+                <search string="Registrations">
+                    <field name="partner_id" string="Partner"/>
+                    <field name="event_id"/>
+                    <separator/>
+                    <filter name="invite" string="Invited" domain="[('state','=','invite')]" help="Invited registrations"/>
+                    <filter name="confirm" string="Confirmed" domain="[('state','=','confirm')]" help="Confirmed registrations"/>
+                    <filter name="present" string="Attended" domain="[('state','=','present')]" help="Attended registrations"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <filter string="Event" context="{'group_by':'event_id'}"/>
+                        <filter string="Partner" context="{'group_by':'partner_id'}"/>
+                        <filter string="Status" context="{'group_by':'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_event_registration_form" model="ir.ui.view">
+            <field name="name">simple_event_registration_form</field>
+            <field name="model">simple.event.registration</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="button_confirm" type="object" string="Confirm" class="oe_highlight" states="invite" groups="simple_event.group_event_write" />
+                        <button name="button_present" type="object" string="Attend" class="oe_highlight" states="confirm" groups="simple_event.group_event_write"/>
+                        <button name="button_confirm" type="object" string="Back to confirmed" states="present" groups="simple_event.group_event_write"/>
+                        <button name="button_invite" type="object" string="Back to invited" states="confirm" groups="simple_event.group_event_write"/>
+                        <field name="state" widget="statusbar" statusbar_visible="invite,confirm,present" statusbar_colors='{"invite":"blue","confirm":"blue","present":"blue"}'/>
+                    </header>
+
+                    <sheet>
+                        <group>
+                            <field name="event_id" domain="[('state', '!=', 'done')]" options="{'no_create': True}" attrs="{'readonly':[('state','!=', 'invite')]}"/>
+                            <field name="partner_id" options="{'no_create': True}" attrs="{'readonly':[('state','!=', 'invite')]}"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                        </group>
+                        <group>
+                            <field name="date_start_event"/>
+                            <field name="date_stop_event"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_list_registration">
+            <field name="name">Registrations</field>
+            <field name="res_model">simple.event.registration</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- diplay only registrations that are attached to active event (buttonbox event) -->
+        <record id="act_event_list_register_event" model="ir.actions.act_window">
+            <field name="res_model">simple.event.registration</field>
+            <field name="view_type">form</field>
+            <field name="name">Registrations</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_event_id': active_id, 'default_event_id': active_id}</field>
+        </record>
+
+        <!-- diplay only registrations that are attached to active partner (buttonbox partner) -->
+        <record id="act_event_list_register_partner" model="ir.actions.act_window">
+            <field name="res_model">simple.event.registration</field>
+            <field name="view_type">form</field>
+            <field name="name">Registrations</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_partner_id': active_id, 'default_partner_id': active_id}</field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,431 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* simple_event
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-25 15:48+0000\n"
+"PO-Revision-Date: 2017-02-25 15:48+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: simple_event
+#: code:addons/simple_event/models/event.py:8
+#: model:ir.model,name:simple_event.model_simple_event_event
+#, python-format
+msgid "An event"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.registration:simple_event.view_event_registration_form
+msgid "Attend"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/event.py:57
+#: code:addons/simple_event/models/registration.py:63
+#: field:simple.event.event,nb_present:0
+#: view:simple.event.registration:simple_event.view_registration_search
+#: selection:simple.event.registration,state:0
+#, python-format
+msgid "Attended"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.registration:simple_event.view_registration_search
+msgid "Attended registrations"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.registration:simple_event.view_event_registration_tree
+msgid "Attended the Event"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.event:simple_event.view_event_form
+#: view:simple.event.registration:simple_event.view_event_registration_form
+msgid "Back to confirmed"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.registration:simple_event.view_event_registration_form
+msgid "Back to invited"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/event.py:52
+#: field:simple.event.event,date_start:0
+#, python-format
+msgid "Begin date"
+msgstr ""
+
+#. module: simple_event
+#: view:res.partner.register.event:simple_event.res_partner_register_event_view
+msgid "Cancel"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.registration:simple_event.view_event_registration_form
+msgid "Confirm"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.registration:simple_event.view_event_registration_tree
+msgid "Confirm Registration"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/event.py:56
+#: code:addons/simple_event/models/event.py:60
+#: code:addons/simple_event/models/registration.py:62
+#: view:simple.event.event:simple_event.view_event_search
+#: field:simple.event.event,nb_confirm:0
+#: selection:simple.event.event,state:0
+#: view:simple.event.registration:simple_event.view_registration_search
+#: selection:simple.event.registration,state:0
+#, python-format
+msgid "Confirmed"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.event:simple_event.view_event_search
+msgid "Confirmed events"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.registration:simple_event.view_registration_search
+msgid "Confirmed registrations"
+msgstr ""
+
+#. module: simple_event
+#: view:res.partner.register.event:simple_event.res_partner_register_event_view
+msgid "Create registrations"
+msgstr ""
+
+#. module: simple_event
+#: field:res.partner.register.event,create_uid:0
+#: field:simple.event.event,create_uid:0
+#: field:simple.event.event.type,create_uid:0
+#: field:simple.event.registration,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: simple_event
+#: field:res.partner.register.event,create_date:0
+#: field:simple.event.event,create_date:0
+#: field:simple.event.event.type,create_date:0
+#: field:simple.event.registration,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/event.py:50
+#: field:simple.event.event,description:0
+#, python-format
+msgid "Description"
+msgstr ""
+
+#. module: simple_event
+#: field:res.partner.register.event,display_name:0
+#: field:simple.event.event,display_name:0
+#: field:simple.event.event.type,display_name:0
+#: field:simple.event.registration,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/event.py:61
+#: view:simple.event.event:simple_event.view_event_search
+#: selection:simple.event.event,state:0
+#, python-format
+msgid "Done"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/registration.py:66
+#: field:simple.event.registration,email:0
+#, python-format
+msgid "Email"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/event.py:53
+#: field:simple.event.event,date_stop:0
+#, python-format
+msgid "End date"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/event.py:49
+#: code:addons/simple_event/models/registration.py:56
+#: field:simple.event.event,name:0
+#: view:simple.event.registration:simple_event.view_registration_search
+#: field:simple.event.registration,event_id:0
+#, python-format
+msgid "Event"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.event:simple_event.view_event_search
+msgid "Event Type"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/registration.py:58
+#: field:simple.event.registration,date_start_event:0
+#, python-format
+msgid "Event begin date"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.event:simple_event.view_event_form
+msgid "Event done"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/registration.py:59
+#: field:simple.event.registration,date_stop_event:0
+#, python-format
+msgid "Event end date"
+msgstr ""
+
+#. module: simple_event
+#: field:res.partner.register.event,event_id:0
+msgid "Event id"
+msgstr ""
+
+#. module: simple_event
+#: model:res.groups,name:simple_event.group_event_write
+msgid "Event manager"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/event.py:51
+#: code:addons/simple_event/models/event_type.py:9
+#: model:ir.model,name:simple_event.model_simple_event_event_type
+#: field:simple.event.event,type_id:0
+#, python-format
+msgid "Event type"
+msgstr ""
+
+#. module: simple_event
+#: model:ir.actions.act_window,name:simple_event.action_list_event_type
+#: model:ir.ui.menu,name:simple_event.menu_event_type
+msgid "Event types"
+msgstr ""
+
+#. module: simple_event
+#: model:res.groups,name:simple_event.group_event_read
+msgid "Event viewer"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/registration.py:9
+#: model:ir.model,name:simple_event.model_simple_event_registration
+#, python-format
+msgid "Event's registration"
+msgstr ""
+
+#. module: simple_event
+#: view:res.partner:simple_event.view_partner_form
+#: view:simple.event.event:simple_event.view_event_form
+msgid "Event's registrations"
+msgstr ""
+
+#. module: simple_event
+#: model:ir.actions.act_window,name:simple_event.action_list_event
+#: model:ir.module.category,name:simple_event.module_category_simple_event
+#: model:ir.ui.menu,name:simple_event.menu_event
+#: model:ir.ui.menu,name:simple_event.menu_event_titre
+#: model:ir.ui.menu,name:simple_event.menu_event_top
+#: view:simple.event.event:simple_event.view_event_search
+msgid "Events"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.event:simple_event.view_event_search
+msgid "Events done"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.event:simple_event.view_event_search
+#: view:simple.event.registration:simple_event.view_registration_search
+msgid "Group By"
+msgstr ""
+
+#. module: simple_event
+#: model:ir.module.category,description:simple_event.module_category_simple_event
+msgid "Helps you manage your events"
+msgstr ""
+
+#. module: simple_event
+#: field:res.partner.register.event,id:0
+#: field:simple.event.event,id:0
+#: field:simple.event.event.type,id:0
+#: field:simple.event.registration,id:0
+msgid "ID"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/event.py:55
+#: code:addons/simple_event/models/registration.py:61
+#: field:simple.event.event,nb_invite:0
+#: view:simple.event.registration:simple_event.view_registration_search
+#: selection:simple.event.registration,state:0
+#, python-format
+msgid "Invited"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.registration:simple_event.view_registration_search
+msgid "Invited registrations"
+msgstr ""
+
+#. module: simple_event
+#: field:res.partner.register.event,__last_update:0
+#: field:simple.event.event,__last_update:0
+#: field:simple.event.event.type,__last_update:0
+#: field:simple.event.registration,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: simple_event
+#: field:res.partner.register.event,write_uid:0
+#: field:simple.event.event,write_uid:0
+#: field:simple.event.event.type,write_uid:0
+#: field:simple.event.registration,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: simple_event
+#: field:res.partner.register.event,write_date:0
+#: field:simple.event.event,write_date:0
+#: field:simple.event.event.type,write_date:0
+#: field:simple.event.registration,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: simple_event
+#: field:simple.event.event.type,name:0
+#: field:simple.event.registration,name:0
+msgid "Name"
+msgstr ""
+
+#. module: simple_event
+#: sql_constraint:simple.event.registration:0
+msgid "Only one registration per partner to the same event"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/registration.py:57
+#: model:ir.model,name:simple_event.model_res_partner
+#: view:simple.event.registration:simple_event.view_registration_search
+#: field:simple.event.registration,partner_id:0
+#, python-format
+msgid "Partner"
+msgstr ""
+
+#. module: simple_event
+#: model:ir.actions.act_window,name:simple_event.action_list_partner
+#: model:ir.ui.menu,name:simple_event.menu_event_partner
+msgid "Partners"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/registration.py:65
+#: field:simple.event.registration,phone:0
+#, python-format
+msgid "Phone"
+msgstr ""
+
+#. module: simple_event
+#: model:ir.actions.act_window,name:simple_event.action_partner_register_event
+msgid "Register in an event"
+msgstr ""
+
+#. module: simple_event
+#: field:res.partner,registration_count:0
+msgid "Registration count"
+msgstr ""
+
+#. module: simple_event
+#: field:res.partner,registration_ids:0
+#: field:simple.event.event,registration_ids:0
+msgid "Registration ids"
+msgstr ""
+
+#. module: simple_event
+#: model:ir.actions.act_window,name:simple_event.act_event_list_register_event
+#: model:ir.actions.act_window,name:simple_event.act_event_list_register_partner
+#: model:ir.actions.act_window,name:simple_event.action_list_registration
+#: model:ir.ui.menu,name:simple_event.menu_registration
+#: view:res.partner:simple_event.view_partner_form
+#: view:simple.event.event:simple_event.view_event_form
+#: view:simple.event.registration:simple_event.view_registration_search
+msgid "Registrations"
+msgstr ""
+
+#. module: simple_event
+#: view:res.partner.register.event:simple_event.res_partner_register_event_view
+msgid "Select event to register"
+msgstr ""
+
+#. module: simple_event
+#: model:ir.ui.menu,name:simple_event.menu_event_settings_titre
+msgid "Settings"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.event:simple_event.view_event_search
+msgid "Start Month"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/event.py:62
+#: code:addons/simple_event/models/registration.py:64
+#: field:simple.event.event,state:0
+#: field:simple.event.registration,state:0
+#, python-format
+msgid "State"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.event:simple_event.view_event_search
+#: view:simple.event.registration:simple_event.view_registration_search
+msgid "Status"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/registration.py:34
+#, python-format
+msgid "The selected event is done, you cannot add a registration to it"
+msgstr ""
+
+#. module: simple_event
+#: code:addons/simple_event/models/event.py:58
+#: field:simple.event.event,nb_total:0
+#, python-format
+msgid "Total"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.event:simple_event.view_event_search
+msgid "Upcoming"
+msgstr ""
+
+#. module: simple_event
+#: view:simple.event.event:simple_event.view_event_search
+msgid "Upcoming events from today"
+msgstr ""
+
+#. module: simple_event
+#: view:res.partner.register.event:simple_event.res_partner_register_event_view
+msgid "or"
+msgstr ""
+
